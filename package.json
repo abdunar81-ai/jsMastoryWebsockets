@@ -7,17 +7,25 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src --ext ts,tsx --exec \"node --loader ts-node/esm\" src/index.ts",
     "build": "tsc",
-    "start": "node dist/src/index.js"
+    "start": "node dist/src/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "private": true,
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.1",
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
+    "pg": "^8.11.5",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.31.9",
+    "tsx": "^4.7.1",
     "typescript": "^5.9.3"
   }
 }
